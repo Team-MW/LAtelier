@@ -84,7 +84,7 @@ export function Site() {
           </a>
         </section>
 
-        {/* ESPRIT */}
+        {/* ESPRdddIT */}
         <section className="section section-paper" id="esprit">
           <Reveal className="wrap intro">
             <Eyebrow index={t.spiritIndex} label={t.spiritLabel} />

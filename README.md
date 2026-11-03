@@ -22,3 +22,4 @@ Le téléphone, WhatsApp, l’e-mail, Instagram et le lien d’itinéraire se r�
 Les horaires exacts, l’adresse de rue et les tarifs ne sont pas affichés : ils ne figuraient pas sur les photos.
 # LAtelier
 # LAtelier
+# LAtelier

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { salon } from "@/lib/salon";
+import { salon, prices } from "@/lib/salon";
 import { langs } from "@/lib/content";
 import { useI18n } from "@/components/Language";
 import { Header } from "@/components/Header";
@@ -79,24 +79,10 @@ export function Site() {
               ))}
             </dl>
           </div>
-          <a className="hero-scroll" href="#esprit">
+          <a className="hero-scroll" href="#prestations">
             <span>{t.scroll}</span>
             <i aria-hidden="true" />
           </a>
-        </section>
-
-        {/* ESPRIT */}
-        <section className="section section-paper" id="esprit">
-          <Reveal className="wrap intro">
-            <Eyebrow index={t.spiritIndex} label={t.spiritLabel} />
-            <h2 className="statement">
-              {t.spiritTitle} <em>{t.spiritEm}</em>
-            </h2>
-            <div className="intro-body">
-              <p className="prose">{t.spiritBody}</p>
-              <Mark className="intro-mark" />
-            </div>
-          </Reveal>
         </section>
 
         {/* PRESTATIONS */}
@@ -119,6 +105,36 @@ export function Site() {
                 </li>
               ))}
             </ol>
+          </Reveal>
+        </section>
+
+        {/* TARIFS */}
+        <section className="section section-paper" id="tarifs">
+          <Reveal className="wrap pricing">
+            <div className="pricing-copy">
+              <Eyebrow index={t.pricesIndex} label={t.pricesLabel} />
+              <h2>{t.pricesTitle}</h2>
+              <p className="prose">{t.pricesBody}</p>
+              <a className="btn btn-dark" href="#visite">
+                {t.heroPrimary}
+                <Arrow />
+              </a>
+            </div>
+            <ul className="price-list">
+              {t.priceItems.map((item) => (
+                <li key={item.id}>
+                  <div className="price-row">
+                    <h3>{item.title}</h3>
+                    <span className="price-dots" aria-hidden="true" />
+                    <p className="price">
+                      {prices[item.id]}
+                      <small>€</small>
+                    </p>
+                  </div>
+                  <p className="price-text">{item.text}</p>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </section>
 
@@ -322,6 +338,12 @@ export function Site() {
         <div className="wrap footer-bottom">
           <p>
             © {year} L’Atelier N°04 · Marbella. {t.rights}
+          </p>
+          <p className="credit">
+            {t.madeBy}{" "}
+            <a href="https://microdidact.com" target="_blank" rel="noopener">
+              Microdidact
+            </a>
           </p>
           <a href="#top">{t.toTop} ↑</a>
         </div>

@@ -31,3 +31,15 @@ export const hours: Record<"mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun"
 };
 
 export const timeZone = "Europe/Madrid";
+
+/**
+ * Tarifs en euros. Les intitulés sont traduits dans lib/content.ts (priceItems).
+ * ⚠️ PRIX D'EXEMPLE — À REMPLACER PAR LES VRAIS TARIFS DU SALON.
+ */
+export const prices: Record<"coupe" | "degrade" | "coupeBarbe" | "barbe" | "enfant", number> = {
+  coupe: 18,
+  degrade: 20,
+  coupeBarbe: 28,
+  barbe: 12,
+  enfant: 15,
+};

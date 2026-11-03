@@ -8,6 +8,7 @@ import { Header } from "@/components/Header";
 import { BookingForm } from "@/components/BookingForm";
 import { Reveal } from "@/components/Reveal";
 import { Mark } from "@/components/Mark";
+import { Hours } from "@/components/Hours";
 
 function Eyebrow({ index, label }: { index: string; label: string }) {
   return (
@@ -84,7 +85,7 @@ export function Site() {
           </a>
         </section>
 
-        {/* ESPRddffdIT */}
+        {/* ESPRIT */}
         <section className="section section-paper" id="esprit">
           <Reveal className="wrap intro">
             <Eyebrow index={t.spiritIndex} label={t.spiritLabel} />
@@ -202,6 +203,22 @@ export function Site() {
                 <Arrow />
               </a>
             </div>
+          </Reveal>
+        </section>
+
+        {/* HORAIRES */}
+        <section className="section section-paper" id="horaires">
+          <Reveal className="wrap hours-section">
+            <div className="hours-copy">
+              <Eyebrow index={t.hoursIndex} label={t.hoursLabel} />
+              <h2>{t.hoursTitle}</h2>
+              <p className="prose">{t.hoursBody}</p>
+              <a className="btn btn-dark" href="#visite">
+                {t.heroPrimary}
+                <Arrow />
+              </a>
+            </div>
+            <Hours />
           </Reveal>
         </section>
 

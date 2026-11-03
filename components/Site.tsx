@@ -79,33 +79,10 @@ export function Site() {
               ))}
             </dl>
           </div>
-          <a className="hero-scroll" href="#prestations">
+          <a className="hero-scroll" href="#tarifs">
             <span>{t.scroll}</span>
             <i aria-hidden="true" />
           </a>
-        </section>
-
-        {/* PRESTATIONS */}
-        <section className="section section-stone" id="prestations">
-          <Reveal className="wrap">
-            <div className="section-head">
-              <Eyebrow index={t.servicesIndex} label={t.servicesLabel} />
-              <h2>{t.servicesTitle}</h2>
-              <p className="note">{t.servicesNote}</p>
-            </div>
-            <ol className="menu">
-              {t.services.map((service, index) => (
-                <li className="menu-item" key={service.id}>
-                  <span className="menu-num">0{index + 1}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <a className="menu-cta" href="#visite" aria-label={`${t.book} — ${service.title}`}>
-                    <Arrow />
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
         </section>
 
         {/* TARIFS */}
